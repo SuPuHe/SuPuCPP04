@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 12:57:00 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/23 15:18:17 by omizin           ###   ########.fr       */
+/*   Updated: 2025/09/23 15:57:47 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class Animal
 {
-	private:
+	protected:
 		std::string	_type;
 	public:
 		Animal();
@@ -25,5 +25,6 @@ class Animal
 		Animal &operator=(Animal const &copy);
 		virtual ~Animal();
 
-		void	makeSound();
+		virtual void	makeSound()const;
+		std::string		getType()const;
 };

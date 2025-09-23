@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 12:56:56 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/23 15:26:38 by omizin           ###   ########.fr       */
+/*   Updated: 2025/09/23 16:00:24 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,12 @@ Animal &Animal::operator=(Animal const &copy)
 
 Animal::~Animal()
 {
-	std::cout << "Animal destructor with type" << _type << " called" << std::endl;
+	std::cout << "Animal destructor with type " << _type << " called" << std::endl;
 }
 
-void	Animal::makeSound()
+void	Animal::makeSound() const
 {
 	std::cout << "Animal with type " << _type << " makes an animal sound" << std::endl;
 }
+
+std::string	Animal::getType() const { return _type; }
