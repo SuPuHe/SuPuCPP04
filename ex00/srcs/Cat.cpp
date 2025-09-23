@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 12:57:01 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/23 15:58:05 by omizin           ###   ########.fr       */
+/*   Updated: 2025/09/23 16:29:42 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cat::Cat(): Animal()
 {
 	_type = "Cat";
-	std::cout << "Cat constructor called" << std::endl;
+	std::cout << GREEN << "Cat constructor called" << RESET << std::endl;
 }
 
 Cat::Cat(Cat const &copy): Animal(copy)
@@ -32,10 +32,10 @@ Cat &Cat::operator=(Cat const &copy)
 
 Cat::~Cat()
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << RED << "Cat destructor called" << RESET << std::endl;
 }
 
 void	Cat::makeSound()const
 {
-	std::cout << "Meow meow meow" << std::endl;
+	std::cout << MAGENTA << "Meow meow meow" << RESET << std::endl;
 }
