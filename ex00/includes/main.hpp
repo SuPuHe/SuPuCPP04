@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 13:01:05 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/23 15:56:41 by omizin           ###   ########.fr       */
+/*   Updated: 2025/09/23 16:02:57 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@
 
 #include "Animal.hpp"
 #include "Cat.hpp"
+#include "Dog.hpp"
 
 #endif
