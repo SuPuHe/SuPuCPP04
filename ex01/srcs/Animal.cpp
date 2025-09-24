@@ -24,13 +24,13 @@ Animal::Animal(std::string type): _type(type)
 
 Animal::Animal(Animal const &copy): _type(copy._type)
 {
-	std::cout << "Animal copy constructor with type" << _type << " called" << std::endl;
+	std::cout << "Animal copy constructor with type " << _type << " called" << std::endl;
 }
 
 Animal &Animal::operator=(Animal const &copy)
 {
-	std::cout << "Animal copy assigment operator with type" << _type << " called" << std::endl;
 	_type = copy._type;
+	std::cout << "Animal copy assigment operator with type" << _type << " called" << std::endl;
 	return *this;
 }
 

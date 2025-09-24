@@ -15,27 +15,37 @@
 Dog::Dog(): Animal()
 {
 	_type = "Dog";
+	_brain = new Brain();
 	std::cout << GREEN << "Dog constructor called" << RESET << std::endl;
 }
 
 Dog::Dog(Dog const &copy): Animal(copy)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
+	_brain = new Brain(*copy._brain);
 }
 
 Dog &Dog::operator=(Dog const &copy)
 {
 	std::cout << "Dog copy assigment operator called" << std::endl;
-	_type = copy._type;
+	if (this != &copy)
+	{
+		Animal::operator=(copy);
+		delete _brain;
+		_brain = new Brain(*copy._brain);
+	}
 	return *this;
 }
 
 Dog::~Dog()
 {
 	std::cout << RED << "Dog destructor called" << RESET << std::endl;
+	delete _brain;
 }
 
 void	Dog::makeSound()const
 {
 	std::cout << MAGENTA << "Bark bark bark" << RESET << std::endl;
 }
+
+Brain* Dog::getBrain() const { return _brain; }

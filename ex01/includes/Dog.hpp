@@ -16,6 +16,8 @@
 
 class Dog: public Animal
 {
+	private:
+		Brain	*_brain;
 	public:
 		Dog();
 		Dog(Dog const &copy);
@@ -23,4 +25,5 @@ class Dog: public Animal
 		~Dog();
 
 		void	makeSound()const;
+		Brain*	getBrain() const;
 };
