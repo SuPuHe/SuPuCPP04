@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 17:06:28 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/30 14:11:10 by omizin           ###   ########.fr       */
+/*   Updated: 2025/09/30 15:11:36 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Cure &Cure::operator=(const Cure &copy)
 
 Cure::~Cure()
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "Cure destructor called" << std::endl;
 }
 
 AMateria* Cure::clone() const { return new Cure(*this); }

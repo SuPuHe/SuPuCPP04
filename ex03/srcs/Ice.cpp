@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 17:06:27 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/30 14:12:38 by omizin           ###   ########.fr       */
+/*   Updated: 2025/09/30 15:11:43 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Ice &Ice::operator=(const Ice &copy)
 
 Ice::~Ice()
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "Ice destructor called" << std::endl;
 }
 
 AMateria* Ice::clone() const { return new Ice(*this); }
