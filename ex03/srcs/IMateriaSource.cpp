@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 17:06:24 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/30 15:19:56 by omizin           ###   ########.fr       */
+/*   Updated: 2025/09/30 15:35:23 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void MateriaSource::learnMateria(AMateria* m)
 	{
 		if (!_templates[i])
 		{
-			_templates[i] = m->clone();
+			_templates[i] = m;
 			return;
 		}
 	}
