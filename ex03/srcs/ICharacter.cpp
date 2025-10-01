@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 17:06:26 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/30 13:22:47 by omizin           ###   ########.fr       */
+/*   Updated: 2025/10/01 12:30:12 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void Character::equip(AMateria* m)
 			return;
 		}
 	}
+	delete m;
 	std::cout << "No more space in the inventory" << std::endl;
 }
 
