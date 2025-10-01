@@ -6,13 +6,20 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 17:06:34 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/30 12:44:58 by omizin           ###   ########.fr       */
+/*   Updated: 2025/10/01 12:33:50 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "main.hpp"
+
+struct trash
+{
+	AMateria *materia;
+	trash *next;
+	trash(AMateria *m) : materia(m), next(nullptr) {}
+};
 
 class ICharacter
 {
@@ -29,6 +36,7 @@ class Character: public ICharacter
 	private:
 		std::string	_name;
 		AMateria *_inventory[SIZE];
+		trash *_trash;
 	public:
 		Character();
 		Character(std::string name);
