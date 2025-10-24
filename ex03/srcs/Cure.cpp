@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 17:06:28 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/30 15:11:36 by omizin           ###   ########.fr       */
+/*   Updated: 2025/10/24 17:02:52 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ AMateria* Cure::clone() const { return new Cure(*this); }
 
 void Cure::use(ICharacter& target)
 {
-	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+	std::cout << GREEN << "* heals " << target.getName() << "'s wounds *" << RESET << std::endl;
 }

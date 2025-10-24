@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 17:06:24 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/30 15:35:23 by omizin           ###   ########.fr       */
+/*   Updated: 2025/10/24 17:12:20 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 		if (_templates[i] &&_templates[i]->getType() == type)
 			return _templates[i]->clone();
 	}
+	std::cout << RED << "Materia of type " << type << " not found" << RESET << std::endl;
 	return nullptr;
 }

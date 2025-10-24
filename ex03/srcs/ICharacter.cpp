@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 17:06:26 by omizin            #+#    #+#             */
-/*   Updated: 2025/10/01 12:46:53 by omizin           ###   ########.fr       */
+/*   Updated: 2025/10/24 17:06:10 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,14 @@ void Character::equip(AMateria* m)
 {
 	if (!m)
 	{
-		std::cout << "There is nothing to put in inventory" << std::endl;
+		std::cout << RED << "There is nothing to put in inventory" << RESET << std::endl;
 		return;
 	}
 	for (int i = 0; i < SIZE; i++)
 	{
 		if (_inventory[i] == m)
 		{
-			std::cout << "This materia is already equipped" << std::endl;
+			std::cout << RED << "This materia is already equipped" << RESET << std::endl;
 			return;
 		}
 	}
@@ -94,20 +94,20 @@ void Character::equip(AMateria* m)
 			return;
 		}
 	}
+	std::cout << RED << "No more space in the inventory" << RESET << std::endl;
 	delete m;
-	std::cout << "No more space in the inventory" << std::endl;
 }
 
 void Character::unequip(int idx)
 {
 	if (idx < 0 || idx >= SIZE)
 	{
-		std::cout << "This inventory slot doesn't exist" << std::endl;
+		std::cout << RED << "This inventory slot doesn't exist" << RESET << std::endl;
 		return;
 	}
 	if (!_inventory[idx])
 	{
-		std::cout << "This slot is empty" << std::endl;
+		std::cout << RED << "This slot is empty" << RESET << std::endl;
 	}
 
 	trash *node = new trash(_inventory[idx]);
@@ -121,12 +121,12 @@ void Character::use(int idx, ICharacter& target)
 {
 	if (idx < 0 || idx >= SIZE)
 	{
-		std::cout << "This inventory slot doesn't exist" << std::endl;
+		std::cout << RED << "This inventory slot doesn't exist" << RESET << std::endl;
 		return;
 	}
 	if (!_inventory[idx])
 	{
-		std::cout << "This slot is empty" << std::endl;
+		std::cout << RED << "This slot is empty" << RESET << std::endl;
 		return;
 	}
 	_inventory[idx]->use(target);
