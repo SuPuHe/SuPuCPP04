@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 12:57:09 by omizin            #+#    #+#             */
-/*   Updated: 2025/09/23 16:15:53 by omizin           ###   ########.fr       */
+/*   Updated: 2025/10/24 14:13:28 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ class WrongAnimal
 		WrongAnimal &operator=(WrongAnimal const &copy);
 		virtual ~WrongAnimal();
 
-		virtual void	makeSound()const;
+		void	makeSound()const;
 		std::string		getType()const;
 };
